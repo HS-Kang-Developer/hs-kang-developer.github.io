@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import { useTranslation } from 'react-i18next';
+import skillsColors from '../../data/skillsColors.json';
 
 function SkillsSection() {
   const { t } = useTranslation();
@@ -9,10 +10,10 @@ function SkillsSection() {
 
   const languageSkills = [
     { name: 'PHP', icon: '/assets/icons/php.svg' },
-    { name: 'Java', icon: '/assets/icons/java.svg' },
+    { name: 'Java', icon: null },
     { name: 'JavaScript', icon: '/assets/icons/javascript.svg' },
     { name: 'Python', icon: '/assets/icons/python.svg' },
-    { name: 'ShellScript', icon: null } // 아이콘 없는 경우
+    { name: 'ShellScript', icon: null }
   ];
 
   const toolSkills = [
@@ -23,7 +24,7 @@ function SkillsSection() {
     { name: 'Git', icon: '/assets/icons/git.svg' },
     { name: 'GitHub', icon: '/assets/icons/github.svg' },
     { name: 'GitLab', icon: '/assets/icons/gitlab.svg' },
-    { name: 'AWS', icon: '/assets/icons/aws.svg' },
+    { name: 'AWS', icon: '/assets/icons/amazonwebservices.svg' },
     { name: 'MySQL', icon: '/assets/icons/mysql.svg' },
     { name: 'PostgreSQL', icon: '/assets/icons/postgresql.svg' },
     { name: 'MongoDB', icon: '/assets/icons/mongodb.svg' },
@@ -34,22 +35,32 @@ function SkillsSection() {
     { name: 'JasperReports', icon: '/assets/icons/jasperreports.svg' }
   ];
 
+  const getColor = (name) => {
+    const match = skillsColors.find((item) => item.name === name);
+    return match ? match.color : '#666';
+  };
+
   const renderSkillList = (skills) =>
-    skills.map((skill) => (
-      <li key={skill.name} className="skill-item">
-        {skill.icon && (
-          <img
-            src={skill.icon}
-            alt={skill.name}
-            className="skill-icon"
-            onError={(e) => {
-              e.target.style.display = 'none';
-            }}
-          />
-        )}
-        {skill.name}
-      </li>
-    ));
+    skills.map((skill) => {
+      const color = getColor(skill.name);
+      return (
+        <li key={skill.name} className="skill-item">
+          {skill.icon && (
+            <div className="skill-icon-wrapper" style={{ backgroundColor: color }}>
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="skill-icon"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
+            </div>
+          )}
+          {skill.name}
+        </li>
+      );
+    });
 
   return (
     <section className="skills">

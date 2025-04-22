@@ -1,22 +1,21 @@
 import React from 'react';
 import './style.css';
+import { useTranslation } from 'react-i18next';
 
 function AboutSection() {
+  const { t } = useTranslation();
+
+  const tags = ['FullStack', 'React', 'Laravel', 'SpringBoot', 'Node.js', 'AWS'];
+
   return (
     <section className="about">
       <div className="about-container">
-        <h2 className="about-title">About Me</h2>
-        <p className="about-text">
-          I'm a developer who loves building tools that solve real-world problems.
-          I enjoy working across the full stack and always strive for clean, maintainable code.
-        </p>
+        <h2 className="about-title">{t('about.title')}</h2>
+        <p className="about-text">{t('about.description')}</p>
         <ul className="about-keywords">
-          <li>#FullStack</li>
-          <li>#React</li>
-          <li>#Laravel</li>
-          <li>#SpringBoot</li>
-          <li>#Node.js</li>
-          <li>#AWS</li>
+          {tags.map((tag) => (
+            <li key={tag}>#{t(`about.tags.${tag}`, tag)}</li>
+          ))}
         </ul>
       </div>
     </section>
