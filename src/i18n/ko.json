@@ -16,6 +16,27 @@
     "title": "깔끔하고 확장 가능한 웹 애플리케이션을 만드는 것을 좋아하는 풀스택 개발자입니다.",
     "status": "이 블로그는 현재 제작 중입니다."
   },
+  "projects": {
+    "title": "프로젝트",
+    "viewMore": "자세히 보기",
+    "items": [
+        {
+          "title": "포트폴리오 웹사이트",
+          "description": "React, i18n, 다국어 지원으로 구성된 포트폴리오입니다.",
+          "link": "#"
+        },
+        {
+          "title": "좌석 관리 시스템",
+          "description": "Spring Boot + React 기반 사내 좌석 관리 도구",
+          "link": "#"
+        },
+        {
+          "title": "일본어 단어장 앱",
+          "description": "모바일 대응 일본어 단어 암기 앱 (React Native 계획)",
+          "link": "#"
+        }
+      ]
+  },
   "skills": {
     "language": "언어 및 프레임워크",
     "tools": "도구 및 환경"

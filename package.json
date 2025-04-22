@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "version": "0.1.0",
-  "homepage": "https://hs-kang-developer.github.io",  
+  "homepage": "https://hs-kang-developer.github.io",
   "private": true,
   "dependencies": {
     "cra-template-pwa": "2.0.0",
@@ -10,6 +10,8 @@
     "react-dom": "^19.1.0",
     "react-i18next": "^15.4.1",
     "react-scripts": "5.0.1",
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "^3.8.1",
     "web-vitals": "^4.2.4"
   },
   "scripts": {

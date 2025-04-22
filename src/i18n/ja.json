@@ -16,6 +16,27 @@
     "title": "自己紹介",
     "description": "私は、Webフレームワークとクラウド技術を活用してスケーラブルなサービスを構築するのが好きなフルスタック開発者です。"
   },
+  "projects": {
+    "title": "プロジェクト",
+    "viewMore": "詳細を見る",
+    "items": [
+      {
+        "title": "ポートフォリオウェブサイト",
+        "description": "React と i18n を使った多言語対応のポートフォリオです。",
+        "link": "#"
+      },
+      {
+        "title": "座席管理システム",
+        "description": "Spring Boot と React を用いた社内座席管理ツールです。",
+        "link": "#"
+      },
+      {
+        "title": "日本語単語帳アプリ",
+        "description": "モバイル対応の日本語単語暗記アプリ（React Native 計画中）",
+        "link": "#"
+      }
+    ]
+  },
   "skills": {
     "language": "言語とフレームワーク",
     "tools": "ツール・環境・DB"

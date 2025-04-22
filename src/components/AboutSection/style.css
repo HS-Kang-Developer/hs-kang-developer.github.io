@@ -22,13 +22,13 @@
 } */
 
 .about-text {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin: 0 auto 2rem auto;
+  font-size: 1.5rem;
+  margin: 3rem auto 5rem auto;
   line-height: 1.6;
   text-align: center;
   word-break: break-word; /* optional for 완전한 대응 */
 }
+
 .about-keywords {
   display: flex;
   flex-wrap: wrap;

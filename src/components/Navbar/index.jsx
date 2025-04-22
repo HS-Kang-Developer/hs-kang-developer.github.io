@@ -17,7 +17,7 @@ return (
       <span className="logo"><span className="accent"></span></span>
     </div>
     <ul className="navbar-menu">
-      <li><a href="#features">{t('nav.features')}</a></li>
+      <li><a href="#about">{t('nav.features')}</a></li>
       <li><a href="#projects">{t('nav.projects')}</a></li>
       <li><a href="#blog">{t('nav.blog')}</a></li>
       <li><a href="#contact">{t('nav.contact')}</a></li>

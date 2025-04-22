@@ -5,6 +5,7 @@ import './i18n';
 import Navbar from './components/Navbar'; 
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
+import ProjectsSection from './components/ProjectsSection';
 // import ProjectsSection from './components/ProjectsSection';
 // import ContactSection from './components/ContactSection';
 import SkillsSection from './components/SkillsSection';
@@ -25,6 +26,7 @@ function App() {
       </header> */}
       <HeroSection />
       <AboutSection />
+      <ProjectsSection /> 
       <SkillsSection />
       <Footer />
     </div>

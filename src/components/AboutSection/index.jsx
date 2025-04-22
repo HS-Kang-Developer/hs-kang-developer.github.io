@@ -8,7 +8,7 @@ function AboutSection() {
   const tags = ['FullStack', 'React', 'Laravel', 'SpringBoot', 'Node.js', 'AWS'];
 
   return (
-    <section className="about">
+    <section className="about"  id="about">
       <div className="about-container">
         <h2 className="about-title">{t('about.title')}</h2>
         <p className="about-text">{t('about.description')}</p>
