@@ -1,24 +1,36 @@
 import React from 'react';
-import './App.css';
+import './style.css';
 import { useTranslation } from 'react-i18next';
-import logo from './logo.svg';
 
-function App() {
+function MainHero() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>{t('greeting')}</h1>
-        <p>{t('description')}</p>
-        <div style={{ marginTop: '20px' }}>
-          <button onClick={() => i18n.changeLanguage('ko')}>🇰🇷 한국어</button>
-          <button onClick={() => i18n.changeLanguage('ja')}>🇯🇵 日本語</button>
-        </div>
+    <div className="hero-container">
+      <header className="hero-header">
+        <div className="logo">React <span className="highlight">Résumé</span></div>
+        <nav>
+          <a href="#features">{t('features')}</a>
+          <a href="#pricing">{t('pricing')}</a>
+          <a href="#blog">{t('blog')}</a>
+          <a href="#examples">{t('examples')}</a>
+        </nav>
+        <button className="get-started">Get Started</button>
       </header>
+
+      <main className="hero-content">
+        <h1>
+          {t('headline.part1')} <span className="highlight">{t('headline.part2')}</span>
+        </h1>
+        <p>{t('subtext')}</p>
+        <div style={{ marginTop: '20px' }}>
+          <button onClick={() => i18n.changeLanguage('ko')}>🇰🇷</button>
+          <button onClick={() => i18n.changeLanguage('ja')}>🇯🇵</button>
+        </div>
+        <button className="get-started-big">{t('cta')}</button>
+      </main>
     </div>
   );
 }
 
-export default App;
+export default MainHero;
