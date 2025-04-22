@@ -18,13 +18,25 @@
   font-style: italic;
 }
 
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
 .footer-right a {
   color: #ccc;
-  font-size: 1.2rem;
-  margin-left: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer-right a:hover {
   color: gold;
 }
+
