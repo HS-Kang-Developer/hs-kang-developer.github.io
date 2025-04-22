@@ -1,4 +1,6 @@
 {
-  "greeting": "안녕하세요!",
-  "description": "프론트엔드 개발자 포트폴리오입니다."
+  "skills": {
+    "language": "언어 및 프레임워크",
+    "tools": "환경 / 도구 / DB"
+  }
 }
