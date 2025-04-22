@@ -1,7 +1,7 @@
 .about {
   background-color: #1a1a1a;
   color: white;
-  padding: 80px 20px;
+  padding: 80px 20px 30px 20px;
   text-align: center;
 }
 
@@ -13,14 +13,22 @@
   text-align: center;
 }
 
-.about-text {
+/* .about-text {
   max-width: 700px;
   margin: 0 auto 2rem auto;
   color: #ccc;
   line-height: 1.6;
   font-size: 1.1rem;
-}
+} */
 
+.about-text {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  text-align: center;
+  word-break: break-word; /* optional for 완전한 대응 */
+}
 .about-keywords {
   display: flex;
   flex-wrap: wrap;

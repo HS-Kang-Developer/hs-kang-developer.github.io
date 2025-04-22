@@ -17,8 +17,10 @@
 .hero-subtitle {
   font-size: 1.2rem;
   color: #ccc;
-  max-width: 600px;
   margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  text-align: center;
+  word-break: break-word; /* optional for 완전한 대응 */
 }
 
 .hero-buttons {
