@@ -39,4 +39,11 @@
 .footer-right a:hover {
   color: gold;
 }
+.gmail-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(39%) sepia(93%) saturate(2896%) hue-rotate(340deg) brightness(99%) contrast(94%);
+  margin-right: 8px;
+  vertical-align: middle;
+}
 
