@@ -1,0 +1,30 @@
+.footer {
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333;
+}
+
+.footer-left .logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-left .accent {
+  color: gold;
+  font-style: italic;
+}
+
+.footer-right a {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-right a:hover {
+  color: gold;
+}

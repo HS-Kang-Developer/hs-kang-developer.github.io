@@ -1,19 +1,20 @@
 import React from 'react';
 import './App.css';
 import './i18n';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar'; 
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
-import ProjectsSection from './components/ProjectsSection';
-import ContactSection from './components/ContactSection';
+// import ProjectsSection from './components/ProjectsSection';
+// import ContactSection from './components/ContactSection';
 import SkillsSection from './components/SkillsSection';
+import Footer from './components/Footer';
 function App() {
-  const { i18n } = useTranslation();
+  // const { i18n } = useTranslation();
 
-  const handleLanguageChange = (lang) => {
-    i18n.changeLanguage(lang);
-  };
+  // const handleLanguageChange = (lang) => {
+  //   i18n.changeLanguage(lang);
+  // };
 
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
+      <Footer />
     </div>
   );
 }

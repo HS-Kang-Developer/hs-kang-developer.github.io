@@ -6,7 +6,7 @@ import skillsColors from '../../data/skillsColors.json';
 function SkillsSection() {
   const { t } = useTranslation();
 
-  const defaultIcon = '/assets/icons/default.svg';
+  // const defaultIcon = '/assets/icons/default.svg';
 
   const languageSkills = [
     { name: 'PHP', icon: '/assets/icons/php.svg' },
