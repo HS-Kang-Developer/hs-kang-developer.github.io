@@ -24,43 +24,43 @@
         "id": "1",
         "title": "포트폴리오 웹사이트",
         "description": "React, i18n, 다국어 지원으로 구성된 포트폴리오입니다.",
-        "link": "/projects/1"
+        "link": "#/projects/1"
       },
       {
         "id": "2",
         "title": "좌석 관리 시스템",
         "description": "Spring Boot + React 기반 사내 좌석 관리 도구",
-        "link": "/projects/2"
+        "link": "#/projects/2"
       },
       {
         "id": "3",
         "title": "의료보험 데이터 이관",
         "description": "Hadoop 기반 의료 데이터 이관 자동화 및 검증 스크립트 개선",
-        "link": "/projects/3"
+        "link": "#/projects/3"
       },
       {
         "id": "4",
         "title": "학교 CMS 운영 및 유지보수",
         "description": "모바일 대응, 검색어 순위 화면 및 버그 수정, 신규 설문조사 화면 구현",
-        "link": "/projects/4"
+        "link": "#/projects/4"
       },
       {
         "id": "5",
         "title": "화장품 구매 사이트 유지보수",
         "description": "사이트 표준화 및 결제 기능 추가, 라인 연동 UI 개발",
-        "link": "/projects/5"
+        "link": "#/projects/5"
       },
       {
         "id": "6",
         "title": "사내 DX추진 프로젝트",
         "description": "Raspberry Pi와 Python을 활용한 공장 설비 모니터링 시스템",
-        "link": "/projects/6"
+        "link": "#/projects/6"
       },
       {
         "id": "7",
         "title": "호텔 관리 시스템 유지보수",
         "description": "Java 기반 장애 대응 및 경량 기능 추가, 브리지 역할 수행",
-        "link": "/projects/7"
+        "link": "#/projects/7"
       }
     ],
     "detail": {

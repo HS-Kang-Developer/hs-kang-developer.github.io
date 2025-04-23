@@ -24,43 +24,43 @@
         "id": "1",
         "title": "ポートフォリオウェブサイト",
         "description": "React、i18nによる多言語対応のポートフォリオサイトです。",
-        "link": "/projects/1"
+        "link": "#/projects/1"
       },
       {
         "id": "2",
         "title": "座席管理システム",
         "description": "Spring Boot + Reactベースの社内座席管理ツール",
-        "link": "/projects/2"
+        "link": "#/projects/2"
       },
       {
         "id": "3",
         "title": "医療保険データ移行",
         "description": "Hadoopベースの医療データ移行自動化と検証スクリプトの改善",
-        "link": "/projects/3"
+        "link": "#/projects/3"
       },
       {
         "id": "4",
         "title": "学校CMS運用・保守",
         "description": "検索語ランキング、バグ修正、アンケート画面の新規開発",
-        "link": "/projects/4"
+        "link": "#/projects/4"
       },
       {
         "id": "5",
         "title": "化粧品ECサイト保守",
         "description": "決済機能追加・LINE連携UIの開発・コード標準化対応",
-        "link": "/projects/5"
+        "link": "#/projects/5"
       },
       {
         "id": "6",
         "title": "社内DX推進プロジェクト",
         "description": "Raspberry PiとPythonによる設備モニタリングシステムの開発",
-        "link": "/projects/6"
+        "link": "#/projects/6"
       },
       {
         "id": "7",
         "title": "ホテル予約システム保守",
         "description": "Javaベースの障害対応および韓国とのブリッジ対応",
-        "link": "/projects/7"
+        "link": "#/projects/7"
       }
     ],
     "detail": {
