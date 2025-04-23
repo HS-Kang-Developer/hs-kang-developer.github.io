@@ -1,35 +1,44 @@
 import React from 'react';
 import './App.css';
 import './i18n';
-// import { useTranslation } from 'react-i18next';
-import Navbar from './components/Navbar'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
-// import ProjectsSection from './components/ProjectsSection';
-// import ContactSection from './components/ContactSection';
 import SkillsSection from './components/SkillsSection';
 import Footer from './components/Footer';
-function App() {
-  // const { i18n } = useTranslation();
+import ProjectDetail from './pages/ProjectDetail'; // 상세 페이지 컴포넌트 (나중에 만들거)
 
-  // const handleLanguageChange = (lang) => {
-  //   i18n.changeLanguage(lang);
-  // };
+function Home() {
 
   return (
-    <div className="App">
+    <>
       <Navbar />
-      {/* <header className="language-toggle">
-        <button onClick={() => handleLanguageChange('ko')}>🇰🇷 한국어</button>
-        <button onClick={() => handleLanguageChange('ja')}>🇯🇵 日本語</button>
-      </header> */}
       <HeroSection />
       <AboutSection />
-      <ProjectsSection /> 
+      <ProjectsSection />
       <SkillsSection />
       <Footer />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -47,3 +47,32 @@
   vertical-align: middle;
 }
 
+/* 기존 PC 스타일은 그대로 유지됨 */
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .footer-left {
+    width: 100%;
+  }
+
+  .footer-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .footer-left .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-right .gmail-icon {
+    margin-left: 50px; /* 이름과 아이콘 사이 여백 */
+  }
+}
+

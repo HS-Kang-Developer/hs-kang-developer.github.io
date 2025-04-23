@@ -5,40 +5,154 @@
     "blog": "ブログ",
     "contact": "お問い合わせ"
   },
-  "hero": {
-    "greeting": "こんにちは、私は",
-    "name": "HS",
-    "end": "です。",
-    "title": "クリーンで拡張性のあるWebアプリケーションの開発に情熱を持つフルスタック開発者です。",
-    "status": "このブログは現在作成中です。"
-  },
   "about": {
     "title": "自己紹介",
-    "description": "私は、Webフレームワークとクラウド技術を活用してスケーラブルなサービスを構築するのが好きなフルスタック開発者です。"
+    "description": "私は、Webフレームワークとクラウド技術を活用し、拡張性の高いサービスを構築するのが好きなフルスタック開発者です。"
+  },
+  "hero": {
+    "greeting": "こんにちは、",
+    "name": "HS",
+    "end": "です。",
+    "title": "クリーンで拡張可能なWebアプリケーションの開発が得意なフルスタック開発者です。",
+    "status": "このブログは現在作成中です。"
   },
   "projects": {
     "title": "プロジェクト",
     "viewMore": "詳細を見る",
     "items": [
       {
+        "id": "1",
         "title": "ポートフォリオウェブサイト",
-        "description": "React と i18n を使った多言語対応のポートフォリオです。",
-        "link": "#"
+        "description": "React、i18nによる多言語対応のポートフォリオサイトです。",
+        "link": "/projects/1"
       },
       {
+        "id": "2",
         "title": "座席管理システム",
-        "description": "Spring Boot と React を用いた社内座席管理ツールです。",
-        "link": "#"
+        "description": "Spring Boot + Reactベースの社内座席管理ツール",
+        "link": "/projects/2"
       },
       {
-        "title": "日本語単語帳アプリ",
-        "description": "モバイル対応の日本語単語暗記アプリ（React Native 計画中）",
-        "link": "#"
+        "id": "3",
+        "title": "医療保険データ移行",
+        "description": "Hadoopベースの医療データ移行自動化と検証スクリプトの改善",
+        "link": "/projects/3"
+      },
+      {
+        "id": "4",
+        "title": "学校CMS運用・保守",
+        "description": "検索語ランキング、バグ修正、アンケート画面の新規開発",
+        "link": "/projects/4"
+      },
+      {
+        "id": "5",
+        "title": "化粧品ECサイト保守",
+        "description": "決済機能追加・LINE連携UIの開発・コード標準化対応",
+        "link": "/projects/5"
+      },
+      {
+        "id": "6",
+        "title": "社内DX推進プロジェクト",
+        "description": "Raspberry PiとPythonによる設備モニタリングシステムの開発",
+        "link": "/projects/6"
+      },
+      {
+        "id": "7",
+        "title": "ホテル予約システム保守",
+        "description": "Javaベースの障害対応および韓国とのブリッジ対応",
+        "link": "/projects/7"
       }
-    ]
+    ],
+    "detail": {
+      "overviewTitle": "プロジェクト概要",
+      "techTitle": "使用技術",
+      "featuresTitle": "主な機能",
+      "back": "戻る",
+      "toHome": "他のプロジェクトを見る",
+      "1": {
+        "title": "ポートフォリオウェブサイト",
+        "description": "Reactとi18nを用いた多言語対応の個人ポートフォリオサイトです。",
+        "overview": "自身の職務経歴やスキルを一目で確認できるよう設計されたポートフォリオです。",
+        "tech": ["React", "react-i18next", "CSS", "GitHub Pages"],
+        "features": [
+          "日本語・韓国語に対応した多言語機能",
+          "レスポンシブデザイン",
+          "直感的でシンプルなUI",
+          "GitHub Pagesによる公開"
+        ]
+      },
+      "2": {
+        "title": "座席管理システム",
+        "description": "社内向け座席予約および部署管理が可能なシステムです。",
+        "overview": "Spring BootとReactで構成された、座席配置や予約管理を視覚的に行える業務用ツールです。",
+        "tech": ["Spring Boot", "React", "MySQL", "Docker"],
+        "features": [
+          "座席配置の可視化",
+          "部署ごとの色分け管理",
+          "ドラッグでの座席追加・編集",
+          "リアルタイムな予約状況反映"
+        ]
+      },
+      "3": {
+        "title": "医療保険データ移行",
+        "description": "医療保険システムのデータマイグレーションにおけるテストおよびスクリプト修正を担当",
+        "overview": "既存システムから新システムへのデータ移行テストを実施し、ShellやHiveQLスクリプトのバージョンアップ対応を行いました。",
+        "tech": ["ShellScript", "Rlogin", "Impala", "Hive", "Hadoop", "Linux"],
+        "features": [
+          "データ移行テストおよび結果確認作業",
+          "環境変数ファイル作成とスクリプト移行",
+          "ディレクトリ構造の再構成と共通設定対応",
+          "テストケースの作成と本番データ反映"
+        ]
+      },
+      "4": {
+        "title": "学校CMS運用・保守",
+        "description": "学校ブログCMSにおける新機能追加および不具合修正",
+        "overview": "検索語ランキング表示や記事リスト画面の追加、バリデーション対応、アンケート機能の新規実装を行いました。",
+        "tech": ["PHP", "Laravel", "Livewire", "JavaScript", "PostgreSQL", "Docker"],
+        "features": [
+          "検索語ランキングと連動した記事リスト機能",
+          "文言統一やバリデーション修正",
+          "アンケート機能（DB設計〜画面実装）"
+        ]
+      },
+      "5": {
+        "title": "化粧品ECサイト保守",
+        "description": "決済機能追加、入力チェック標準化、LINE連携UI開発を対応",
+        "overview": "GMOトークン決済機能の組み込みや、定数の整理・共通化、LINE APIとの連携画面の設計を行いました。",
+        "tech": ["PHP", "Laravel", "JavaScript", "SQLServer", "Docker"],
+        "features": [
+          "GMOトークン決済連携",
+          "画面入力項目の標準化およびリファクタリング",
+          "LINEとの連携画面設計"
+        ]
+      },
+      "6": {
+        "title": "社内DX推進プロジェクト（Raspberry Pi）",
+        "description": "PythonとRaspberry Piを使用したセンサーシステム開発",
+        "overview": "振動センサーによるデータ送信、交通量測定用のカウントシステムなど、IoTシステムの構築・運用を担当しました。",
+        "tech": ["Python", "Raspberry Pi", "MongoDB", "AWS", "Linux"],
+        "features": [
+          "センサーデータの収集およびサーバー送信",
+          "車両カウントプログラムの実装",
+          "AWS上での構成管理・運用"
+        ]
+      },
+      "7": {
+        "title": "ホテル予約管理システム保守",
+        "description": "JavaとOracleベースの既存予約システムの改修とサポート対応",
+        "overview": "日本と韓国間の橋渡し役として、予約関連のバグ修正、軽微機能追加、コード調査を行いました。",
+        "tech": ["Java", "JSP", "HTML", "PL/SQL", "Oracle", "AWS"],
+        "features": [
+          "Javaソースの調査と障害修正",
+          "PL/SQLロジックの修正",
+          "国際ブリッジ対応（日本語⇄韓国語）"
+        ]
+      }
+    }
   },
   "skills": {
     "language": "言語とフレームワーク",
-    "tools": "ツール・環境・DB"
+    "tools": "ツール・環境"
   }
 }
