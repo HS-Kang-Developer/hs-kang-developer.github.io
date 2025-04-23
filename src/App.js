@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './i18n';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // 변경된 부분
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
@@ -10,10 +10,9 @@ import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import SkillsSection from './components/SkillsSection';
 import Footer from './components/Footer';
-import ProjectDetail from './pages/ProjectDetail'; // 상세 페이지 컴포넌트 (나중에 만들거)
+import ProjectDetail from './pages/ProjectDetail';
 
 function Home() {
-
   return (
     <>
       <Navbar />
@@ -32,6 +31,7 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
+
   return (
     <Router>
       <Routes>
