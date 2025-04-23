@@ -46,6 +46,11 @@
   cursor: pointer;
   font-size: 1.1rem;
 }
+
+.scroll-section {
+  scroll-margin-top: 100px;
+}
+
 @media (max-width: 768px) {
 
   .navbar {
@@ -83,7 +88,7 @@
     cursor: pointer;
     font-size: 1.1rem;
   }
-  
+
   html[lang="ja"] .navbar-menu {
     flex-wrap: wrap;              /* ✅ 줄바꿈 허용 */
     justify-content: center;      /* ✅ 가운데 정렬 */

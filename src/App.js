@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import './i18n';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // 변경된 부분
-import { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
