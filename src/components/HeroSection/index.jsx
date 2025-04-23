@@ -14,8 +14,8 @@ function HeroSection() {
         {/* <p className="hero-subtitle">{t('hero.title')}</p> */}
         <p className="hero-subtitle">{t('hero.status')}</p>
         <div className="hero-buttons">
-          <a href="#projects" className="btn-primary">{t('hero.viewProjects', 'View Projects')}</a>
-          <a href="#contact" className="btn-secondary">{t('hero.contactMe', 'Contact Me')}</a>
+          {/* <a href="#projects" className="btn-primary">{t('hero.viewProjects', 'View Projects')}</a>
+          <a href="#contact" className="btn-secondary">{t('hero.contactMe', 'Contact Me')}</a> */}
         </div>
       </div>
     </section>
