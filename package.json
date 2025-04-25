@@ -4,6 +4,7 @@
   "homepage": "https://hs-kang-developer.github.io",
   "private": true,
   "dependencies": {
+    "aos": "^2.3.4",
     "cra-template-pwa": "2.0.0",
     "i18next": "^25.0.1",
     "i18next-browser-languagedetector": "^8.0.5",

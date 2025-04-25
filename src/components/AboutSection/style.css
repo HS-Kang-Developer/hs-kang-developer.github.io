@@ -1,48 +1,49 @@
 .about {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 80px 20px 30px 20px;
+  background-color: #111;
+  padding: 100px 20px;
+  color: #fff;
   text-align: center;
+}
+
+.about-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: radial-gradient(circle at top left, rgba(255, 215, 0, 0.08), rgba(0, 0, 0, 0.7));
+  border-radius: 20px;
+  border-left: 5px solid gold;
+  border-right: 5px solid gold;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
 }
 
 .about-title {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  color: gold;
+  margin-bottom: 1.5rem;
   font-weight: bold;
-  color: gold; /* ✅ 노란색으로 변경 */
-  text-align: center;
 }
 
-/* .about-text {
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
-  color: #ccc;
-  line-height: 1.6;
-  font-size: 1.1rem;
-} */
-
 .about-text {
-  font-size: 1.5rem;
-  margin: 3rem auto 5rem auto;
-  line-height: 1.6;
-  text-align: center;
-  word-break: break-word; /* optional for 완전한 대응 */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 2rem;
 }
 
 .about-keywords {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  list-style: none;
+  gap: 0.8rem;
   padding: 0;
-  margin: 0;
+  list-style: none;
 }
 
-.about-keywords li {
-  background-color: #333;
-  padding: 0.5rem 1rem;
+.keyword {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid gold;
+  color: gold;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
   border-radius: 20px;
-  font-size: 0.95rem;
-  color: #fff;
 }
