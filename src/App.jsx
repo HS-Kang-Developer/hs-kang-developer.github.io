@@ -10,12 +10,14 @@ import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import SkillsSection from './components/SkillsSection';
 import StudyProjectsSection from './components/StudyProjectsSection';
+import AnalyticsTracker from './components/AnalyticsTracker';
 import Footer from './components/Footer';
 import ProjectDetail from './pages/ProjectDetail';
 
 function Home() {
   return (
     <>
+      <AnalyticsTracker />
       <Navbar />
       <HeroSection />
       <AboutSection />

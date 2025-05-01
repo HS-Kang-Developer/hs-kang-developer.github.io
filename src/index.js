@@ -6,10 +6,6 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import './i18n';
 
-// Google Analytics 4
-import ReactGA from "react-ga4";
-ReactGA.initialize("G-ZTL6T8C5G4"); // ← 너의 측정 ID
-ReactGA.send("pageview");
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
