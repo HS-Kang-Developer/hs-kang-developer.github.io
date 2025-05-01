@@ -3,6 +3,7 @@ import './App.css';
 import './i18n';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects/:id" element={<ProjectDetail />} />

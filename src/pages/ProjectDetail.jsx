@@ -16,12 +16,30 @@ function ProjectDetail() {
   // const thumbnail = t(`projects.detail.${id}.thumbnail`);
   // const links = t(`projects.detail.${id}.links`, { returnObjects: true });
 
+  // 🔧 수정됨 - 상세페이지에서 이전으로 돌아갈 때 스크롤 맨 위로 이동
+  const handleBack = () => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    navigate(-1);
+  };
+
+  // 🔧 수정됨 - 메인으로 이동 후 projects 섹션으로 스크롤
+  const handleGoToProjects = () => {
+    navigate('/');
+    setTimeout(() => {
+      const el = document.getElementById('projects');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // 약간의 렌더링 대기 시간
+  };
+
   return (
     <main className="project-detail-page">
       <header className="project-detail-hero">
         <h1 className="project-detail-title">{title}</h1>
         <p className="project-detail-description">{description}</p>
-{/* 
+
+        {/* 
         {thumbnail && (
           <div className="project-detail-thumbnail">
             <img src={thumbnail} alt="Project Thumbnail" />
@@ -39,13 +57,16 @@ function ProjectDetail() {
               🚀 데모 보기
             </a>
           )}
-        </div> */}
+        </div>
+        */}
 
         <div className="project-detail-navigation-buttons">
-          <button className="project-detail-button back" onClick={() => navigate(-1)}>
+          <button className="project-detail-button back" onClick={handleBack}>
             ← {t('projects.detail.back')}
           </button>
-          <button className="project-detail-button home" onClick={() => navigate('/')}>🏠 {t('projects.detail.toHome')}</button>
+          <button className="project-detail-button home" onClick={handleGoToProjects}>
+            🏠 {t('projects.detail.toHome')}
+          </button>
         </div>
       </header>
 
