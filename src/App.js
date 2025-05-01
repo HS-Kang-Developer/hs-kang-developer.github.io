@@ -8,6 +8,7 @@ import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import SkillsSection from './components/SkillsSection';
+import StudyProjectsSection from './components/StudyProjectsSection';
 import Footer from './components/Footer';
 import ProjectDetail from './pages/ProjectDetail';
 
@@ -18,6 +19,7 @@ function Home() {
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
+      <StudyProjectsSection />
       <SkillsSection />
       <Footer />
     </>

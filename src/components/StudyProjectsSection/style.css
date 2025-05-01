@@ -1,0 +1,73 @@
+.projects-slider {
+  padding: 100px 20px;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+}
+
+.projects-slider-title {
+  font-size: 2rem;
+  color: gold;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.slider-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-slide {
+  padding: 0 10px;
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  border: 2px solid gold;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  height: 2.8rem;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  color: #00c2ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.slick-slide > div {
+  display: flex;
+  height: 100%;
+}
+
+.slick-dots li button:before {
+  color: #ccc;
+}
+
+.slick-dots li.slick-active button:before {
+  color: gold;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: gold;
+}
