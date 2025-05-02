@@ -4,12 +4,4 @@
     <loc>https://hs-kang-developer.github.io/</loc>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://hs-kang-developer.github.io/#projects</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hs-kang-developer.github.io/#contact</loc>
-    <priority>0.8</priority>
-  </url>
 </urlset>
