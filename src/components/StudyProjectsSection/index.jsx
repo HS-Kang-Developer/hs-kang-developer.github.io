@@ -21,7 +21,7 @@ function StudyProjectsSection() {
   };
 
   return (
-    <section className="projects-slider">
+    <section className="projects-slider" id="study">
       <h2 className="projects-slider-title">
         {t('study.title')}
         {projects?.length > 0 && ` (${projects.length})`}

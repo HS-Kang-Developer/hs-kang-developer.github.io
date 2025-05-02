@@ -43,7 +43,7 @@ function Navbar() {
             {t('nav.projects')}
           </ScrollLink>
         </li>
-        <li>
+        {/* <li>
           <ScrollLink
             to="blog"
             spy={true}
@@ -53,6 +53,18 @@ function Navbar() {
             activeClass="active"
           >
             {t('nav.blog')}
+          </ScrollLink>
+        </li> */}
+        <li>
+          <ScrollLink
+            to="study"
+            spy={true}
+            // smooth={true}
+            duration={500}
+            offset={-80}
+            activeClass="active"
+          >
+            {t('nav.study')}
           </ScrollLink>
         </li>
         <li>
