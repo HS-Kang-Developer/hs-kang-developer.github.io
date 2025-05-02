@@ -1,6 +1,8 @@
 /* 앱 전체 기본 스타일 */
 .App {
   text-align: center;
+  background-color: #f9f9f9; /* 전체 배경 밝게 */
+  color: #222;               /* 기본 텍스트 어둡게 */
 }
 
 .App-logo {
@@ -17,19 +19,23 @@
 
 /* 헤더 영역 스타일 */
 .App-header {
-  background-color: transparent; /* 투명하게 처리 */
+  background-color: transparent;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #222; /* 텍스트 색상 밝게 */
 }
 
 /* 링크 스타일 */
 .App-link {
-  color: #61dafb;
+  color: #007acc;
+  text-decoration: none;
+}
+.App-link:hover {
+  text-decoration: underline;
 }
 
 /* 로고 회전 애니메이션 */
@@ -49,18 +55,19 @@
 }
 
 .language-toggle button {
-  background: #444;
-  color: #fff;
+  background: #e0e0e0;
+  color: #222;
   border: none;
   padding: 0.4rem 1rem;
   margin-left: 0.5rem;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background 0.2s ease;
 }
 
 .language-toggle button:hover {
-  background-color: #666;
+  background-color: #ccc;
 }
 
 /* 스크롤 동작 */
