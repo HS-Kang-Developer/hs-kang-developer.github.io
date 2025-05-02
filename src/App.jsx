@@ -13,6 +13,7 @@ import StudyProjectsSection from './components/StudyProjectsSection';
 import AnalyticsTracker from './components/AnalyticsTracker';
 import Footer from './components/Footer';
 import ProjectDetail from './pages/ProjectDetail';
+import ContactSection from './components/ContactSection';
 
 function Home() {
   return (
@@ -21,9 +22,10 @@ function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <SkillsSection />
       <ProjectsSection />
       <StudyProjectsSection />
-      <SkillsSection />
+      <ContactSection />
       <Footer />
     </>
   );

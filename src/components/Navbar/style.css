@@ -32,12 +32,30 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
+  position: relative;           /* ⭐ 밑줄 애니메이션용 */
+  cursor: pointer;              /* ✅ 마우스 커서 손 모양으로 */
+  transition: color 0.3s ease;  /* 색 전환 부드럽게 */
 }
 
 .navbar-menu li a:hover {
   color: gold;
 }
-
+/* ✅ 밑줄 애니메이션 효과 추가 */
+.navbar-menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: gold;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.navbar-menu li a:hover::after {
+  transform: scaleX(1);
+}
 .navbar-right .lang {
   background: transparent;
   border: none;
