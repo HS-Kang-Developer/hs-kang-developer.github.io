@@ -1,3 +1,4 @@
+/* 앱 전체 기본 스타일 */
 .App {
   text-align: center;
 }
@@ -7,14 +8,16 @@
   pointer-events: none;
 }
 
+/* 로고 애니메이션 */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* 헤더 영역 스타일 */
 .App-header {
-  background-color: #282c34;
+  background-color: transparent; /* 투명하게 처리 */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,10 +27,12 @@
   color: white;
 }
 
+/* 링크 스타일 */
 .App-link {
   color: #61dafb;
 }
 
+/* 로고 회전 애니메이션 */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,6 +42,7 @@
   }
 }
 
+/* 언어 전환 버튼 */
 .language-toggle {
   text-align: right;
   padding: 1rem;
@@ -57,6 +63,7 @@
   background-color: #666;
 }
 
+/* 스크롤 동작 */
 html {
   scroll-behavior: smooth;
 }
