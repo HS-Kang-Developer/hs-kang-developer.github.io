@@ -1,22 +1,40 @@
+/* 문의 영역 배경 구분 */
+.contact-section-wrapper {
+  background-color: #181818;
+  padding: 6rem 0 4rem;
+}
+
+/* 섹션 내부 정렬 */
 .contact-section {
-  padding: 4rem 2rem;
-  background-color: #111;
+  padding: 0 2rem;
   color: white;
   text-align: center;
 }
 
+/* 섹션 제목 스타일 */
+.contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #ffd500;
+  font-weight: 700;
+}
+
+/* 폼 전체 박스 */
 .contact-form {
-  max-width: 480px;
+  max-width: 500px;
   margin: 0 auto;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 2rem;
-  background-color: #1a1a1a;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* 입력 필드 */
 .contact-form input,
 .contact-form textarea {
   padding: 1rem;
@@ -24,15 +42,17 @@
   border: none;
   font-size: 1rem;
   background-color: #fff;
-  transition: box-shadow 0.2s ease;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 0 0 1px transparent;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 221, 0, 0.6);
+  box-shadow: 0 0 0 3px rgba(255, 221, 0, 0.5);
 }
 
+/* 버튼 */
 .contact-form button {
   background-color: #ffd500;
   color: #111;
@@ -42,21 +62,33 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 #c9b200;
+  position: relative;
 }
 
 .contact-form button:hover {
-  background-color: #ffcc00;
+  background-color: #ffea00;
+  box-shadow: 0 6px 12px rgba(255, 221, 0, 0.4);
+  transform: translateY(-2px);
 }
+
+.contact-form button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 상태 메시지 */
 .status-message {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 1rem;
+  font-weight: bold;
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .status-message.success {
-  color: #00c853;
+  color: #00e676;
 }
 
 .status-message.fail {
