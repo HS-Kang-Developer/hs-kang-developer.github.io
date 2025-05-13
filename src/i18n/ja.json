@@ -156,7 +156,13 @@
   "title": "個人学習用プロジェクト",
   "viewMore": "詳細を見る",
   "empty": "表示できるプロジェクトがありません。",
-  "items": []
+  "items": [
+    {
+      "title": "Tokyo Train Crowd Map",
+      "description": "東京都心のリアルタイム列車位置と混雑度を地図上で可視化するプロジェクトです。",
+      "link": "https://github.com/HS-Kang-Developer/tokyo-train-map"
+    }
+  ]
   },
   "skills": {
     "language": "言語とフレームワーク",

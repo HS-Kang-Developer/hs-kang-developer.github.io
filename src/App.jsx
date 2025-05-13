@@ -12,7 +12,7 @@ import SkillsSection from './components/SkillsSection';
 import StudyProjectsSection from './components/StudyProjectsSection';
 import AnalyticsTracker from './components/AnalyticsTracker';
 import Footer from './components/Footer';
-import ProjectDetail from './pages/ProjectDetail';
+import ProjectDetail from './pages/Project/ProjectDetail';
 import ContactSection from './components/ContactSection';
 
 function Home() {

@@ -9,14 +9,13 @@ function StudyProjectsSection() {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,  // 1개만 있을 때 무한루프 돌지 않게
     speed: 500,
-    slidesToShow: Math.min(5, projects.length || 1),
+    slidesToShow: Math.min(projects.length, 3),
     slidesToScroll: 1,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: Math.min(projects.length, 2) } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
     ]
   };
 
