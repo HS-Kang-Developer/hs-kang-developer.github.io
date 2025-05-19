@@ -162,6 +162,11 @@
       "title": "Tokyo Train Crowd Map",
       "description": "도쿄 전철의 실시간 열차 위치와 혼잡도를 지도 위에서 시각화하는 프로젝트입니다.",
       "link": "https://github.com/HS-Kang-Developer/tokyo-train-map"
+    },
+     {
+      "title": "스도쿠 퍼즐",
+      "description": "간단하고 직관적인 웹 기반 스도쿠 퍼즐입니다. 난이도 선택이 가능하며, 모바일에서도 편하게 플레이할 수 있습니다.",
+      "link": "https://hs-kang-developer.github.io/MiniGames/sudoku-game/"
     }
   ]
   },

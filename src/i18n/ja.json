@@ -161,6 +161,11 @@
       "title": "Tokyo Train Crowd Map",
       "description": "東京都心のリアルタイム列車位置と混雑度を地図上で可視化するプロジェクトです。",
       "link": "https://github.com/HS-Kang-Developer/tokyo-train-map"
+    },
+    {
+      "title": "数独パズル",
+      "description": "シンプルで直感的に遊べるウェブ版数独パズル。難易度別にプレイ可能で、スマートフォンにも対応しています。",
+      "link": "https://hs-kang-developer.github.io/MiniGames/sudoku-game/"
     }
   ]
   },
