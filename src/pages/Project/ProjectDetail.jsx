@@ -16,13 +16,13 @@ function ProjectDetail() {
   // const thumbnail = t(`projects.detail.${id}.thumbnail`);
   // const links = t(`projects.detail.${id}.links`, { returnObjects: true });
 
-  // 🔧 수정됨 - 상세페이지에서 이전으로 돌아갈 때 스크롤 맨 위로 이동
+  // 수정됨 - 상세페이지에서 이전으로 돌아갈 때 스크롤 맨 위로 이동
   const handleBack = () => {
     window.scrollTo({ top: 0, behavior: 'auto' });
     navigate(-1);
   };
 
-  // 🔧 수정됨 - 메인으로 이동 후 projects 섹션으로 스크롤
+  //  수정됨 - 메인으로 이동 후 projects 섹션으로 스크롤
   const handleGoToProjects = () => {
     navigate('/');
     setTimeout(() => {
