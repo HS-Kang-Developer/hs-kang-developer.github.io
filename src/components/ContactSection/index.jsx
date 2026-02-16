@@ -7,17 +7,27 @@ function ContactSection() {
   const { t } = useTranslation();
   const formRef = useRef();
   const [status, setStatus] = useState('idle'); // 'idle', 'loading', 'success', 'fail'
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
   const sendEmail = (e) => {
     e.preventDefault();
     setStatus('loading');
 
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS env vars are missing.');
+      setStatus('fail');
+      setTimeout(() => setStatus('idle'), 3000);
+      return;
+    }
+
     emailjs
       .sendForm(
-        'service_5lrdhkc',
-        'template_7rhigoo',
+        serviceId,
+        templateId,
         formRef.current,
-        '5M6pIempBtogTDh3F'
+        publicKey
       )
       .then(
         () => {
