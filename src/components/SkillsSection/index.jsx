@@ -29,8 +29,7 @@ function SkillsSection() {
     { name: 'Raspberry Pi', icon: '/assets/icons/raspberrypi.svg' },
     { name: 'Oracle', icon: '/assets/icons/oracle.svg' },
     { name: 'Visual Studio Code', icon: '/assets/icons/visualstudiocode.svg' },
-    { name: 'Sourcetree', icon: '/assets/icons/sourcetree.svg' },
-    { name: 'JasperReports', icon: '/assets/icons/jasperreports.svg' }
+    { name: 'Sourcetree', icon: '/assets/icons/sourcetree.svg' }
   ];
 
   const getColor = (name) => {
