@@ -15,7 +15,7 @@
     "name": "HS",
     "end": "です。",
     "title": "クリーンで拡張可能なWebアプリケーションの開発が得意なフルスタック開発者です。",
-    "status": "version 1.0 | 最終更新: 2026-02-16"
+    "status": "version 1.1 | 最終更新: 2026-11-17"
   },
   "projects": {
     "title": "プロジェクト",
@@ -166,6 +166,11 @@
       "title": "数独パズル",
       "description": "シンプルで直感的に遊べるウェブ版数独パズル。難易度別にプレイ可能で、スマートフォンにも対応しています。",
       "link": "https://hs-kang-developer.github.io/MiniGames/sudoku-game/"
+    },
+    {
+      "title": "悪魔のゲーム · 脳トレパズル",
+      "description": "四角とキューブを数える脳トレパズル。ヒントと連続正解の記録に対応し、日本語・韓国語で遊べます。",
+      "link": "/games/puzzle-arena/"
     }
   ]
   },
