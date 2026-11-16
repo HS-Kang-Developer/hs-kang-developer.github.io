@@ -94,7 +94,7 @@ for (const locale of ['ko', 'ja']) {
         }
       } finally { dom.window.close(); }
     }
-    assert.equal(translation.study.items.filter(item => item.link === '/games/puzzle-arena/').length, 1);
+    assert.equal(translation.study.items.filter(item => item.link === 'https://hs-kang-developer.github.io/MiniGames/puzzle-arena/').length, 1);
     assert.ok(translation.study.items.some(item => /sudoku/i.test(item.link)), 'existing Sudoku project');
   });
   for (const id of ['1', '2', '3', '4', '5', '6', '7']) {
@@ -119,4 +119,22 @@ test('portfolio styles stay within their shell and cannot restyle the standalone
     for (const selector of rule.selectors) assert.match(selector, /^(?:\.portfolio-site(?:$|[\s:*.[#])|html:has\(\.portfolio-site\))/);
   });
   css.walkAtRules(rule => assert.notEqual(rule.name, 'import'));
+});
+
+test('legacy game URL redirects to the same destination as both translated cards without running storage code', () => {
+  const target = 'https://hs-kang-developer.github.io/MiniGames/puzzle-arena/';
+  const dom = new JSDOM(read('public/games/puzzle-arena/index.html'), {
+    url: 'https://hs-kang-developer.github.io/games/puzzle-arena/',
+  });
+  try {
+    const doc = dom.window.document;
+    assert.equal(doc.querySelector('meta[http-equiv="refresh"]').content.match(/^0;\s*url=(.+)$/i)?.[1], target);
+    assert.equal(doc.querySelector('link[rel="canonical"]').href, target);
+    assert.ok(Array.from(doc.querySelectorAll('a')).some(link => link.href === target));
+    assert.equal(doc.scripts.length, 0);
+    for (const locale of ['ko', 'ja']) {
+      const translation = JSON.parse(read('src/i18n/' + locale + '.json'));
+      assert.equal(translation.study.items.filter(item => item.link === target).length, 1);
+    }
+  } finally { dom.window.close(); }
 });
