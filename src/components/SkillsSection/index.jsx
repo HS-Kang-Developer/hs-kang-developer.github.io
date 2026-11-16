@@ -8,10 +8,10 @@ function SkillsSection() {
 
   const languageSkills = [
     { name: 'PHP', icon: '/assets/icons/php.svg' },
-    { name: 'Java', icon: null },
+    { name: 'Java', icon: '/assets/icons/java.svg' },
     { name: 'JavaScript', icon: '/assets/icons/javascript.svg' },
     { name: 'Python', icon: '/assets/icons/python.svg' },
-    { name: 'ShellScript', icon: null }
+    { name: 'ShellScript', icon: '/assets/icons/shellscript.svg' }
   ];
 
   const toolSkills = [

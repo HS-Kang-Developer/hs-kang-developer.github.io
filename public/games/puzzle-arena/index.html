@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#100d15" />
+    <meta name="description" content="악마의 게임 — 두뇌 퍼즐을 풀고 기록에 도전하세요." />
+    <title>악마의 게임 | 두뇌 퍼즐</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="devil-game">
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" id="brand-home" aria-label="악마의 게임 홈">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M8 5 16 13H24L32 5 30 27 20 35 10 27Z" stroke="currentColor" stroke-width="2"/><path d="m14 20 4 2m8-2-4 2M18 28h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span class="brand-copy"><strong id="brand-title">악마의 게임</strong><small>PUZZLE ARENA</small></span>
+        </a>
+        <div class="topbar-actions">
+          <a class="blog-link" id="back-blog" href="../../#/"><span aria-hidden="true">↖</span><span id="back-blog-label">블로그로</span></a>
+          <div class="language-switch" role="group" aria-label="언어 선택">
+            <button id="language-ko" type="button" aria-pressed="true">KO</button>
+            <button id="language-ja" type="button" aria-pressed="false">日本語</button>
+          </div>
+        </div>
+      </header>
+
+      <section id="home-screen" class="screen home-screen" aria-labelledby="home-title">
+        <div class="home-heading"><div class="hero-copy">
+          <div class="eyebrow"><i></i><span id="home-eyebrow">CHOOSE YOUR GAME</span></div>
+          <h1 id="home-title" tabindex="-1">오늘의 두뇌를<br /><em>시험해 보세요.</em></h1>
+          <p id="home-description">게임을 선택하고, 기록을 쌓아 최고 연속 기록에 도전하세요.</p></div>
+          <div class="hero-emblem" aria-hidden="true"><svg viewBox="0 0 240 180" fill="none"><path d="m120 14 92 53v46l-92 53-92-53V67Z" stroke="currentColor"/><path d="m28 67 92 53 92-53M120 120v46M74 40l92 53v46M166 40 74 93v46" stroke="currentColor"/><path d="m120 39 70 40-70 40-70-40Z" fill="#a987ec" fill-opacity=".09" stroke="#bc9aef"/><path d="m120 119 70-40v34l-70 40Z" fill="#a987ec" fill-opacity=".05"/><path d="m50 79 70 40v34l-70-40Z" fill="#a987ec" fill-opacity=".13"/><path d="m120 68 20 12-20 12-20-12Z" fill="#e16b7e"/></svg><span>OBSERVE / THINK / SOLVE</span></div>
+        </div>
+
+        <section class="records-overview" aria-label="플레이 기록 요약">
+          <div class="record-stat"><span id="label-played">총 도전</span><strong id="stat-played">0</strong><small class="unit-count">회</small></div>
+          <div class="record-stat"><span id="label-accuracy">정답률</span><strong id="stat-accuracy">0</strong><small>%</small></div>
+          <div class="record-stat"><span id="label-best-streak">최고 연속 정답</span><strong id="stat-best-streak">0</strong><small class="unit-count">회</small></div>
+          <div class="record-stat current-stat"><span id="label-current-streak">현재 연속 정답</span><strong id="stat-current-streak">0</strong><small class="unit-count">회</small></div>
+        </section>
+
+        <div class="section-heading">
+          <div><span class="section-kicker" id="library-kicker">GAME LIBRARY</span><h2 id="library-title">게임 선택</h2></div>
+          <span class="count-label"><b id="available-game-count">02</b><span id="available-count"> / 03 AVAILABLE</span></span>
+        </div>
+
+        <div class="game-grid">
+          <button class="game-card featured-card" id="open-squares" type="button">
+            <span class="card-topline"><span class="card-index" id="game-card-index">GAME 01</span><span class="available-tag"><i></i><span id="available-label">플레이 가능</span></span></span>
+            <span class="card-art square-art" aria-hidden="true"><span class="mini-board"><i>3</i><i>7</i><i>2</i><i>5</i><i>4</i><i class="marked">1</i><i class="marked">6</i><i>8</i><i>2</i><i class="marked">5</i><i class="marked">3</i><i>4</i><i>9</i><i>2</i><i>7</i><i>1</i></span><span class="art-annotation">Σ = 15</span></span>
+            <span class="card-name" id="card-squares-title">네모 세기</span>
+            <span class="card-desc" id="card-squares-desc">목표 숫자를 만드는 직사각형의 개수를 찾으세요.</span>
+            <span class="card-bottom"><span id="card-squares-tags">숫자 · 관찰력</span><span class="card-arrow" aria-hidden="true">↗</span></span>
+          </button>
+
+          <button class="game-card featured-card cube-card" id="open-cubes" type="button">
+            <span class="card-topline"><span class="card-index" id="game-card-index-2">GAME 02</span><span class="available-tag"><i></i><span id="available-label-2">플레이 가능</span></span></span>
+            <span class="cube-card-art card-art" aria-hidden="true"><svg viewBox="0 0 240 160" fill="none"><g stroke="#a285be" stroke-linejoin="round"><path d="m120 17 35 20-35 20-35-20Z" fill="#bb98e2"/><path d="m85 37 35 20v40L85 77Z" fill="#715089"/><path d="m120 57 35-20v40l-35 20Z" fill="#49315e"/><path d="m85 57 35 20-35 20-35-20Z" fill="#b193cf"/><path d="m50 77 35 20v40l-35-20Z" fill="#715089"/><path d="m85 97 35-20v40l-35 20Z" fill="#49315e"/><path d="m155 57 35 20-35 20-35-20Z" fill="#e16b7e"/><path d="m120 77 35 20v40l-35-20Z" fill="#9b455b"/><path d="m155 97 35-20v40l-35 20Z" fill="#612d43"/><path d="m120 77 35 20-35 20-35-20Z" fill="#bb98e2"/><path d="m85 97 35 20v40l-35-20Z" fill="#715089"/><path d="m120 117 35-20v40l-35 20Z" fill="#49315e"/></g><path d="m50 97 35 20m0 0 35 20m0 0 35-20m0 0 35-20M85 57l35 20 35-20" stroke="#d0b5e7" stroke-opacity=".7"/></svg></span>
+            <span class="card-name" id="card-cubes-title">큐브 세기</span>
+            <span class="card-desc" id="card-cubes-desc">쌓인 큐브 구조의 전체 개수를 세어보세요.</span>
+            <span class="card-bottom"><span id="card-cubes-tags">공간감각 · 관찰력</span><span class="card-arrow" aria-hidden="true">↗</span></span>
+          </button>
+
+          <article class="game-card locked-card" aria-label="새 게임 준비 중">
+            <span class="card-topline"><span class="card-index" id="game-card-index-3">GAME 03</span><span class="coming-tag" id="coming-label-1">준비 중</span></span>
+            <span class="locked-art locked-art-red" aria-hidden="true"><span>?</span></span>
+            <span class="card-name" id="coming-title-1">새로운 게임</span>
+            <span class="card-desc" id="coming-desc-1">다음 두뇌 게임을 추가할 예정입니다.</span>
+            <span class="card-bottom"><span id="coming-bottom-1">COMING SOON</span><span class="lock-icon" aria-hidden="true">⌑</span></span>
+          </article>
+        </div>
+
+        <section class="history-section" aria-labelledby="history-title">
+          <div class="section-heading history-heading">
+            <div><span class="section-kicker" id="history-kicker">RECENT ACTIVITY</span><h2 id="history-title">최근 기록</h2></div>
+            <span class="local-label" id="local-label">이 기기에 저장</span>
+          </div>
+          <div id="history-list" class="history-list"></div>
+        </section>
+        <footer class="page-footer"><span class="footer-brand">악마의 게임</span><span id="home-footer-label">PUZZLE ARENA · OFFLINE</span></footer>
+      </section>
+
+      <section id="game-screen" class="screen game-screen" aria-labelledby="game-title" hidden>
+        <div class="game-header">
+          <button class="back-button" id="back-home" type="button"><span aria-hidden="true">←</span><span id="back-label">게임 선택</span></button>
+          <div class="game-title-group"><span class="section-kicker" id="game-kicker">GAME 01 · NUMBER PUZZLE</span><h1 id="game-title" tabindex="-1">네모 세기</h1></div>
+          <span class="game-index"><span id="selected-game-index">01</span> <i>/</i> 02</span>
+        </div>
+
+        <div class="game-layout">
+          <div class="game-main">
+            <div class="game-toolbar">
+              <label class="size-control" for="board-size"><span id="size-label">격자 크기</span>
+                <select id="board-size" aria-label="격자 크기">
+                  <option value="4">4 × 4</option><option value="5" selected>5 × 5</option><option value="6">6 × 6</option>
+                </select>
+              </label>
+              <div class="puzzle-label">PUZZLE <strong id="puzzle-number">01</strong></div>
+              <button class="button button-quiet" id="new-puzzle" type="button"><span aria-hidden="true">↻</span><span id="new-puzzle-label">새 문제</span></button>
+            </div>
+
+            <div class="board-panel">
+              <div class="board-meta"><span id="board-dimensions">5 ROWS · 5 COLUMNS</span><span class="legend"><i></i><span id="blank-label">빈칸</span></span></div>
+              <div class="board-wrap"><div class="board" id="board" role="grid" aria-label="숫자 격자"></div></div>
+              <p class="board-note" id="board-note">격자 선을 따라 만든 직사각형을 셉니다. 한 칸짜리도 포함돼요.</p>
+            </div>
+
+            <div class="target-answer-row">
+              <div class="target-card"><span class="card-label" id="target-label">TARGET NUMBER</span><strong class="target-value" id="target-number">—</strong><span class="target-caption" id="target-caption">네모 안 숫자의 합</span></div>
+              <div class="answer-card">
+                <label for="answer-input" id="answer-label">정답 입력</label>
+                <div class="answer-row"><div class="answer-input-wrap"><input id="answer-input" type="number" inputmode="numeric" min="0" step="1" placeholder="개수" autocomplete="off" aria-describedby="answer-feedback" /><span id="answer-unit">개</span></div>
+                  <button class="button button-primary" id="submit-answer" type="button"><span id="submit-label">확인</span><span aria-hidden="true">→</span></button>
+                </div>
+                <p class="feedback" id="answer-feedback" role="status" aria-live="polite">빈칸은 합계에 포함되지 않습니다.</p>
+                <div class="answer-actions"><button class="hint-button" id="show-hint" type="button" aria-expanded="false" aria-controls="hint-box"><span aria-hidden="true">✦</span><span id="hint-label">힌트 보기</span></button><button class="next-button" id="next-puzzle" type="button" hidden><span id="next-label">다음 문제</span> <span aria-hidden="true">→</span></button></div>
+                <div class="hint-box" id="hint-box" hidden aria-live="polite"></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="game-sidebar">
+            <div class="streak-card">
+              <span class="card-label" id="streak-kicker">STREAK CHALLENGE</span>
+              <div class="streak-flame" aria-hidden="true">✦</div>
+              <strong id="game-current-streak">0</strong><span class="streak-unit" id="streak-unit">연속 정답</span>
+              <div class="streak-divider"></div>
+              <div class="best-line"><span id="best-line-label">최고 기록</span><b id="game-best-streak">0회</b></div>
+              <p id="streak-description">정답을 이어가며<br />나만의 기록을 세워보세요.</p>
+            </div>
+            <div class="rules-card">
+              <div class="rules-title"><span class="rules-icon">?</span><h2 id="rules-title">게임 방법</h2></div>
+              <ol><li id="rule-1">격자에서 직사각형을 찾습니다.</li><li id="rule-2">네모 안의 숫자를 모두 더합니다.</li><li id="rule-3">합이 목표 숫자와 같은 네모의 개수를 입력합니다.</li></ol>
+              <div class="rule-tip"><span id="tip-label">TIP</span><span id="rule-tip-text">같은 네모를 두 번 세지 않도록 위치와 크기를 확인하세요.</span></div>
+            </div>
+          </aside>
+        </div>
+        <footer class="page-footer"><span class="footer-brand">악마의 게임</span><span id="game-footer-label">기록은 이 브라우저에만 저장됩니다.</span></footer>
+      </section>
+      <div class="offline-note"><span class="status-dot" aria-hidden="true"></span><span id="offline-label">서버 없이, 나만의 페이스로</span></div>
+    </main>
+  </body>
+</html>

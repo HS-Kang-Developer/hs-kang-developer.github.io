@@ -1,0 +1,288 @@
+/* Every selector stays inside the standalone .devil-game page. */
+.devil-game {
+  color-scheme: dark;
+  --bg: #0b0a10;
+  --panel: #14121b;
+  --line: #342c40;
+  --text: #f1edf7;
+  --muted: #b2a8c0;
+  --purple: #c0a0ed;
+  --red: #f08a9b;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text);
+  background: radial-gradient(ellipse at 85% 0, #27163055, transparent 45%), var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+.devil-game *,
+.devil-game *::before,
+.devil-game *::after { box-sizing: border-box; }
+.devil-game [hidden] { display: none !important; }
+.devil-game :is(button, input, select) { font: inherit; }
+.devil-game :is(button, select, a) { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.devil-game :is(button, select) { cursor: pointer; }
+.devil-game :is(button, a, select, input):focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; }
+.devil-game h1:focus { outline: none; }
+.devil-game .app-shell { width: min(1180px, calc(100% - 64px)); margin: 0 auto; }
+.devil-game .topbar { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--line); }
+.devil-game .brand { display: inline-flex; gap: 12px; align-items: center; min-height: 48px; color: var(--text); text-decoration: none; }
+.devil-game .brand-mark { display: grid; place-items: center; width: 44px; height: 48px; color: var(--red); }
+.devil-game .brand-mark svg { width: 40px; height: 40px; }
+.devil-game .brand-copy { display: grid; gap: 2px; }
+.devil-game .brand-copy strong { font-size: 18px; letter-spacing: -.04em; }
+.devil-game .brand-copy small { color: var(--muted); font: 10px/1.5 var(--mono); letter-spacing: .2em; }
+.devil-game .topbar-actions { display: flex; align-items: center; gap: 24px; }
+.devil-game .blog-link { display: inline-flex; min-height: 44px; align-items: center; gap: 8px; color: var(--muted); text-decoration: none; font-size: 13px; }
+.devil-game .blog-link:hover { color: var(--text); }
+.devil-game .blog-link > span:first-child { color: var(--red); font-size: 19px; }
+.devil-game .language-switch { display: flex; padding: 3px; border: 1px solid var(--line); border-radius: 8px; background: #100e16; }
+.devil-game .language-switch button { min-height: 44px; min-width: 48px; padding: 6px 12px; border: 0; border-radius: 5px; color: var(--muted); background: transparent; font-size: 12px; }
+.devil-game .language-switch button[aria-pressed="true"] { color: #f4eaff; background: #3b2851; }
+.devil-game .home-heading { display: grid; grid-template-columns: 1fr 250px; align-items: center; gap: 32px; padding: 54px 0 36px; }
+.devil-game .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--red); font: 11px/1.5 var(--mono); letter-spacing: .15em; }
+.devil-game .eyebrow i { width: 18px; height: 2px; background: var(--red); }
+.devil-game .home-heading h1 { margin: 18px 0 16px; font-size: clamp(38px, 4.5vw, 60px); font-weight: 750; line-height: 1.18; letter-spacing: -.065em; }
+.devil-game .home-heading h1 em { color: var(--purple); font-style: normal; }
+.devil-game .home-heading p { max-width: 550px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; word-break: keep-all; overflow-wrap: anywhere; }
+.devil-game .hero-emblem { display: grid; justify-items: center; color: #4d365f; }
+.devil-game .hero-emblem svg { width: 240px; height: 180px; }
+.devil-game .hero-emblem span { color: #a897b8; font: 9px/1.5 var(--mono); letter-spacing: .13em; }
+.devil-game .records-overview { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 22px 0; border: 1px solid var(--line); border-radius: 10px; background: #121018; }
+.devil-game .record-stat { display: grid; grid-template-columns: auto 1fr; align-items: baseline; column-gap: 7px; padding: 0 28px; border-right: 1px solid var(--line); }
+.devil-game .record-stat:last-child { border-right: 0; }
+.devil-game .record-stat > span { grid-column: 1 / -1; margin-bottom: 8px; color: var(--muted); font-size: 12px; }
+.devil-game .record-stat strong { font: 500 32px/1.1 var(--mono); font-variant-numeric: tabular-nums; }
+.devil-game .record-stat small { color: var(--muted); font-size: 12px; }
+.devil-game .current-stat strong { color: var(--red); }
+.devil-game .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin: 42px 0 20px; }
+.devil-game .section-kicker { color: var(--muted); font: 10px/1.5 var(--mono); letter-spacing: .13em; }
+.devil-game .section-heading h2 { margin: 5px 0 0; font-size: 24px; line-height: 1.4; letter-spacing: -.04em; }
+.devil-game .count-label { display: inline-flex; gap: 7px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+.devil-game .count-label b { color: var(--purple); font-family: var(--mono); }
+.devil-game .game-grid { display: grid; grid-template-columns: 1fr 1fr .82fr; gap: 18px; }
+.devil-game .game-card { display: flex; flex-direction: column; align-items: stretch; position: relative; min-width: 0; padding: 22px; border: 1px solid #4c385e; border-radius: 12px; color: var(--text); background: linear-gradient(145deg, #1d1728, #131018 80%); text-align: left; }
+.devil-game button.game-card { transition: border-color .18s, background-color .18s; }
+.devil-game button.game-card:active { border-color: var(--red); }
+.devil-game .card-topline,
+.devil-game .card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.devil-game .card-index { color: var(--muted); font: 10px/1.5 var(--mono); letter-spacing: .08em; }
+.devil-game .available-tag { display: inline-flex; align-items: center; gap: 6px; color: #d4b8f7; font-size: 11px; white-space: nowrap; }
+.devil-game .available-tag i { width: 5px; height: 5px; border-radius: 50%; background: var(--purple); }
+.devil-game .card-art { display: grid; place-items: center; position: relative; height: 170px; margin: 20px 0; }
+.devil-game .mini-board { display: grid; grid-template-columns: repeat(4, 1fr); width: 142px; height: 142px; border: 1px solid #5d466f; border-radius: 5px; overflow: hidden; transform: rotate(-7deg); background: #110f17; }
+.devil-game .mini-board i { display: grid; place-items: center; border: 1px solid #352a42; color: #ad9dbb; font: normal 16px var(--mono); }
+.devil-game .mini-board .marked { color: #eee2ff; background: #4d345e; border-color: #9e78bf; }
+.devil-game .art-annotation { position: absolute; right: 4px; bottom: 7px; padding: 4px 9px; border: 1px solid #784653; border-radius: 4px; color: #ef9eab; background: #20151f; font: 11px/1.5 var(--mono); }
+.devil-game .cube-card-art svg { width: 224px; max-width: 100%; height: 164px; }
+.devil-game .card-name { margin: 0; font-size: 23px; line-height: 1.4; font-weight: 700; letter-spacing: -.035em; overflow-wrap: anywhere; }
+.devil-game .card-desc { display: block; min-height: 50px; margin: 9px 0 22px; color: var(--muted); font-size: 13px; line-height: 1.85; word-break: keep-all; overflow-wrap: anywhere; }
+.devil-game .card-bottom { margin-top: auto; padding-top: 15px; border-top: 1px solid var(--line); color: #b4a1c6; font-size: 11px; }
+.devil-game .card-arrow { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: var(--text); background: #31233e; font-size: 20px; }
+.devil-game .locked-card { border: 1px dashed #39313f; background: #100e15; }
+.devil-game .coming-tag { color: var(--muted); font-size: 11px; }
+.devil-game .locked-art { height: 170px; display: grid; place-items: center; margin: 20px 0; }
+.devil-game .locked-art > span { display: grid; place-items: center; width: 80px; height: 80px; border: 1px dashed #4d3b59; border-radius: 18px; color: #9b84ae; font: 36px/1 var(--mono); transform: rotate(8deg); }
+.devil-game .locked-card .card-name { color: #c3b8ce; }
+.devil-game .history-section { margin-top: 42px; }
+.devil-game .history-heading { margin-top: 0; }
+.devil-game .local-label { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.devil-game .history-list { overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: #121017; }
+.devil-game .history-empty { padding: 30px 24px; color: var(--muted); font-size: 13px; text-align: center; }
+.devil-game .history-row { display: grid; grid-template-columns: minmax(100px, .8fr) 1.5fr 1fr auto; gap: 16px; align-items: center; padding: 17px 22px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.devil-game .history-row:last-child { border-bottom: 0; }
+.devil-game .history-date { color: var(--muted); font-variant-numeric: tabular-nums; }
+.devil-game .history-detail { color: #cfc3db; }
+.devil-game .history-result { padding: 3px 9px; border-radius: 4px; white-space: nowrap; font-weight: 600; }
+.devil-game .history-result.correct { color: #d3b4f5; background: #352343; }
+.devil-game .history-result.incorrect { color: #f5a3b0; background: #381d29; }
+.devil-game .page-footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 42px; padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.devil-game .footer-brand { color: #c7b9d3; font-weight: 600; }
+.devil-game .offline-note { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0 0 22px; color: var(--muted); font-size: 11px; }
+.devil-game .status-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--purple); }
+.devil-game .game-screen { padding-top: 24px; }
+.devil-game .game-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+.devil-game .back-button { display: flex; align-items: center; gap: 10px; justify-self: start; min-height: 44px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 6px; color: #d2c7dc; background: #15111b; font-size: 13px; }
+.devil-game .back-button > span:first-child { color: var(--purple); font-size: 19px; }
+.devil-game .game-title-group { text-align: center; }
+.devil-game .game-title-group h1 { margin: 7px 0 0; font-size: 30px; line-height: 1.35; letter-spacing: -.05em; }
+.devil-game .game-index { display: flex; gap: 10px; align-items: center; justify-self: end; color: var(--muted); font: 13px var(--mono); }
+.devil-game .game-index > span { color: var(--purple); }
+.devil-game .game-index i { color: #75565e; font-style: normal; }
+.devil-game .game-layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; align-items: start; gap: 28px; padding-top: 26px; }
+.devil-game .game-main { min-width: 0; }
+.devil-game .game-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.devil-game .size-control { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 12px; }
+.devil-game select { min-width: 94px; min-height: 44px; padding: 8px 10px; border: 1px solid #50415e; border-radius: 6px; color: var(--text); background: #1a1422; font-size: 14px; }
+.devil-game .puzzle-label { color: var(--muted); font: 10px var(--mono); letter-spacing: .1em; }
+.devil-game .puzzle-label strong { margin-left: 5px; color: var(--red); font-size: 13px; }
+.devil-game .button { min-height: 44px; border-radius: 6px; border: 1px solid transparent; }
+.devil-game .button:disabled { opacity: .6; cursor: default; }
+.devil-game .button-quiet { display: flex; gap: 7px; align-items: center; padding: 8px 13px; border-color: var(--line); color: #d4c9df; background: #1a1521; font-size: 13px; white-space: nowrap; }
+.devil-game .button-quiet > span:first-child { color: var(--red); font-size: 20px; }
+.devil-game .board-panel { padding: 20px 24px; border: 1px solid #4d3a5e; border-radius: 10px; background: #131018; }
+.devil-game .board-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--muted); font: 10px/1.5 var(--mono); letter-spacing: .08em; }
+.devil-game .legend { display: inline-flex; align-items: center; gap: 6px; font-family: inherit; letter-spacing: 0; }
+.devil-game .legend i { width: 10px; height: 10px; border: 1px solid #84718f; border-radius: 2px; }
+.devil-game .board-wrap { display: flex; justify-content: center; margin: 22px auto 16px; }
+.devil-game .board { --cols: 5; display: grid; width: min(100%, 360px); grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); overflow: hidden; border: 1px solid #8b6ea1; border-radius: 6px; }
+.devil-game .cell { display: grid; place-items: center; aspect-ratio: 1; border: 1px solid #50405f; color: #f5edff; background: #241b30; font: 500 clamp(22px, 2.5vw, 32px)/1 var(--mono); font-variant-numeric: tabular-nums; }
+.devil-game .cell.blank { background: repeating-linear-gradient(135deg, #18131f, #18131f 5px, #211929 5px, #211929 6px); }
+.devil-game .cube-board { width: min(100%, 480px); }
+.devil-game .cube-board svg { display: block; width: 100%; height: auto; max-height: 360px; }
+.devil-game .cube-board polygon { stroke: #c9a5e6; stroke-width: 1; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.devil-game .cube-left-face { fill: #70508a; }
+.devil-game .cube-right-face { fill: #3f2b54; }
+.devil-game .cube-top-face { fill: #b897d7; }
+.devil-game .cube-top-face.accent { fill: #c8657a; stroke: #f8afbf; }
+.devil-game .board-note { margin: 0; color: #b9aac7; font-size: 12px; text-align: center; line-height: 1.8; word-break: keep-all; overflow-wrap: anywhere; }
+.devil-game .target-answer-row { display: grid; grid-template-columns: minmax(142px, .52fr) minmax(0, 1fr); gap: 16px; margin-top: 18px; }
+.devil-game .target-card { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 0; padding: 22px 12px; border: 1px solid #684580; border-radius: 10px; background: #21162d; text-align: center; }
+.devil-game .card-label { color: #ccb5e0; font: 10px/1.6 var(--mono); letter-spacing: .1em; }
+.devil-game .target-value { margin: 9px 0 5px; color: #dfc6ff; font: 500 54px/1.2 var(--mono); font-variant-numeric: tabular-nums; }
+.devil-game .target-caption { color: #c2accf; font-size: 12px; }
+.devil-game .answer-card { min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+.devil-game .answer-card > label { display: block; margin-bottom: 10px; font-size: 14px; font-weight: 650; }
+.devil-game .answer-row { display: flex; gap: 9px; }
+.devil-game .answer-input-wrap { display: flex; align-items: center; flex: 1; min-width: 0; padding-right: 12px; border: 1px solid #655073; border-radius: 6px; background: #0f0c15; }
+.devil-game .answer-input-wrap:focus-within { border-color: var(--purple); }
+.devil-game input { width: 100%; min-width: 0; min-height: 50px; padding: 10px 12px; border: 0; border-radius: 6px; color: var(--text); background: transparent; font: 18px/1.4 var(--mono); }
+.devil-game input::placeholder { color: #ad9abc; font: 14px sans-serif; }
+.devil-game .answer-input-wrap > span { color: var(--muted); font-size: 12px; }
+.devil-game .button-primary { padding: 10px 16px; color: #fff5f7; background: #a42c49; border-color: #c44c67; font-size: 14px; font-weight: 650; white-space: nowrap; }
+.devil-game .button-primary > span:last-child { margin-left: 6px; }
+.devil-game .feedback { min-height: 44px; margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+.devil-game .feedback.success { color: #dfbaff; }
+.devil-game .feedback.error { color: #ffa5b5; }
+.devil-game .answer-actions { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; }
+.devil-game .hint-button,
+.devil-game .next-button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 6px 0; border: 0; color: #d1adee; background: transparent; font-size: 12px; text-align: left; }
+.devil-game .hint-button > span:first-child { color: var(--red); }
+.devil-game .next-button { color: #f2a1b2; font-weight: 650; }
+.devil-game .hint-box { padding: 13px 14px; border: 1px solid #735086; border-radius: 6px; color: #dfcfec; background: #261b32; font-size: 13px; line-height: 1.85; word-break: keep-all; overflow-wrap: anywhere; }
+.devil-game .game-sidebar { display: grid; gap: 18px; }
+.devil-game .streak-card { position: relative; padding: 22px; border: 1px solid #623448; border-radius: 10px; background: linear-gradient(145deg, #251622, #171018); }
+.devil-game .streak-card > .card-label { display: block; color: #e9a6b7; }
+.devil-game .streak-flame { display: none; }
+.devil-game .streak-card > strong { display: block; margin: 20px 0 4px; color: #f18d9e; font: 500 46px/1.1 var(--mono); }
+.devil-game .streak-unit { color: #cfb5c5; font-size: 12px; }
+.devil-game .streak-divider { height: 1px; margin: 20px 0 14px; background: #563140; }
+.devil-game .best-line { display: flex; justify-content: space-between; align-items: center; gap: 10px; color: #c1aaba; font-size: 13px; }
+.devil-game .best-line b { color: #f0d6e0; font-weight: 600; }
+.devil-game .streak-card p { margin: 16px 0 0; color: #bda8b9; font-size: 12px; line-height: 1.85; }
+.devil-game .rules-card { padding: 22px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+.devil-game .rules-title { display: flex; gap: 10px; align-items: center; }
+.devil-game .rules-icon { display: grid; place-items: center; width: 24px; height: 24px; border: 1px solid #76558b; border-radius: 50%; color: var(--purple); font: 13px var(--mono); }
+.devil-game .rules-title h2 { margin: 0; font-size: 16px; }
+.devil-game .rules-card ol { margin: 18px 0 0; padding-left: 20px; color: #c2b7cf; font-size: 13px; line-height: 1.95; }
+.devil-game .rules-card li { padding-left: 4px; margin-bottom: 8px; }
+.devil-game .rules-card li::marker { color: var(--purple); font-family: var(--mono); }
+.devil-game .rule-tip { margin-top: 18px; padding: 13px; border-left: 2px solid #ad5065; color: #c7b7d2; background: #211825; font-size: 12px; line-height: 1.9; }
+.devil-game .rule-tip > span:first-child { display: block; margin-bottom: 5px; color: #f29aad; font: 10px/1.6 var(--mono); letter-spacing: .1em; }
+@media (hover: hover) {
+  .devil-game button.game-card:hover { border-color: #bb91df; background: #21182d; }
+  .devil-game .button-primary:not(:disabled):hover { background: #b93656; }
+  .devil-game .button-quiet:hover,
+  .devil-game .back-button:hover { border-color: #9875b0; }
+}
+@media (max-width: 980px) {
+  .devil-game .app-shell { width: calc(100% - 40px); }
+  .devil-game .game-grid { gap: 14px; }
+  .devil-game .game-card { padding: 18px; }
+  .devil-game .game-layout { grid-template-columns: minmax(0, 1fr) 240px; gap: 20px; }
+  .devil-game .target-answer-row { grid-template-columns: 1fr; }
+  .devil-game .target-card { display: grid; grid-template-columns: 1fr auto; column-gap: 20px; padding: 16px 22px; text-align: left; }
+  .devil-game .target-value { grid-column: 2; grid-row: 1 / span 2; margin: 0; font-size: 40px; }
+  .devil-game .card-name { font-size: 21px; }
+}
+@media (max-width: 760px) {
+  .devil-game .home-heading { grid-template-columns: 1fr 170px; padding: 38px 0 30px; gap: 10px; }
+  .devil-game .hero-emblem svg { width: 170px; height: 145px; }
+  .devil-game .hero-emblem span { display: none; }
+  .devil-game .record-stat { padding: 0 18px; }
+  .devil-game .game-grid { grid-template-columns: 1fr 1fr; }
+  .devil-game .locked-card { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; padding: 18px 22px; }
+  .devil-game .locked-card .card-topline { grid-column: 1 / -1; margin-bottom: 10px; }
+  .devil-game .locked-art,
+  .devil-game .locked-card .card-bottom { display: none; }
+  .devil-game .locked-card .card-desc { min-height: 0; margin: 0; }
+  .devil-game .game-layout { grid-template-columns: 1fr; }
+  .devil-game .game-sidebar { grid-template-columns: 1fr 1fr; align-items: start; }
+  .devil-game .target-answer-row { grid-template-columns: minmax(130px, .5fr) 1fr; }
+  .devil-game .target-card { display: flex; text-align: center; }
+  .devil-game .target-value { margin: 10px 0; }
+  .devil-game .history-row { grid-template-columns: 1fr auto; gap: 4px 16px; }
+  .devil-game .history-date { grid-column: 1; }
+  .devil-game .history-detail { grid-column: 1; }
+  .devil-game .history-result { grid-column: 2; grid-row: 1 / span 3; }
+}
+@media (max-width: 520px) {
+  .devil-game .app-shell { width: calc(100% - 32px); }
+  .devil-game .topbar { flex-wrap: wrap; gap: 6px 16px; padding: 17px 0 12px; }
+  .devil-game .brand-copy strong { font-size: 17px; }
+  .devil-game .brand-mark { width: 32px; }
+  .devil-game .brand-mark svg { width: 34px; }
+  .devil-game .topbar-actions { width: 100%; justify-content: space-between; gap: 12px; }
+  .devil-game .home-heading { grid-template-columns: 1fr; padding: 32px 0 26px; }
+  .devil-game .home-heading h1 { font-size: clamp(35px, 9.2vw, 45px); }
+  .devil-game .home-heading p { font-size: 14px; }
+  .devil-game .hero-emblem { display: none; }
+  .devil-game .records-overview { grid-template-columns: 1fr 1fr; gap: 20px 0; padding: 20px 0; }
+  .devil-game .record-stat { padding: 0 20px; }
+  .devil-game .record-stat:nth-child(2) { border-right: 0; }
+  .devil-game .record-stat:nth-child(n+3) { padding-top: 16px; border-top: 1px solid var(--line); }
+  .devil-game .record-stat strong { font-size: 30px; }
+  .devil-game .section-heading { margin-top: 32px; gap: 10px; }
+  .devil-game .section-heading h2 { font-size: 22px; }
+  .devil-game .game-grid { grid-template-columns: 1fr; gap: 16px; }
+  .devil-game .game-card { padding: 22px; }
+  .devil-game .card-art { height: 156px; margin: 12px 0 20px; }
+  .devil-game .card-name { font-size: 24px; }
+  .devil-game .card-desc { min-height: 0; font-size: 14px; }
+  .devil-game .locked-card { display: flex; }
+  .devil-game .locked-card .card-topline { margin-bottom: 14px; }
+  .devil-game .locked-card .card-name { font-size: 20px; }
+  .devil-game .locked-card .card-desc { margin-top: 7px; font-size: 13px; }
+  .devil-game .local-label,
+  .devil-game .count-label { font-size: 11px; }
+  .devil-game .history-row { padding: 16px; }
+  .devil-game .page-footer { flex-wrap: wrap; justify-content: flex-start; gap: 5px 16px; margin-top: 28px; font-size: 11px; }
+  .devil-game .game-screen { padding-top: 24px; }
+  .devil-game .game-header { grid-template-columns: 1fr auto; gap: 18px 10px; padding-bottom: 20px; }
+  .devil-game .game-title-group { grid-column: 1 / -1; grid-row: 1; text-align: left; }
+  .devil-game .game-title-group h1 { font-size: 28px; }
+  .devil-game .back-button { grid-row: 2; }
+  .devil-game .game-index { grid-column: 2; grid-row: 2; }
+  .devil-game .game-layout { padding-top: 20px; }
+  .devil-game .game-toolbar { flex-wrap: wrap; gap: 10px 6px; }
+  .devil-game .size-control { gap: 8px; }
+  .devil-game .puzzle-label { display: none; }
+  .devil-game select { min-width: 84px; }
+  .devil-game .button-quiet { padding: 8px 10px; }
+  .devil-game .board-panel { padding: 16px 12px; }
+  .devil-game .board-wrap { margin: 18px auto 14px; }
+  .devil-game .board-meta { font-size: 9px; letter-spacing: .02em; }
+  .devil-game .cell { font-size: clamp(20px, 5.5vw, 28px); }
+  .devil-game .board-note { font-size: 12px; text-align: left; }
+  .devil-game .target-answer-row { grid-template-columns: 1fr; gap: 14px; margin-top: 14px; }
+  .devil-game .target-card { display: grid; grid-template-columns: 1fr auto; text-align: left; padding: 16px 18px; }
+  .devil-game .target-value { grid-column: 2; grid-row: 1 / span 2; margin: 0; font-size: 42px; }
+  .devil-game .answer-card { padding: 18px; }
+  .devil-game .button-primary { padding: 10px 14px; }
+  .devil-game .feedback { font-size: 13px; }
+  .devil-game .hint-button,
+  .devil-game .next-button { font-size: 13px; }
+  .devil-game .game-sidebar { grid-template-columns: 1fr; gap: 14px; }
+  .devil-game .streak-card { padding: 20px; }
+  .devil-game .streak-card > strong { margin: 14px 0 2px; font-size: 40px; }
+  .devil-game .streak-card p br { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .devil-game *,
+  .devil-game *::before,
+  .devil-game *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
